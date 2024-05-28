@@ -16,10 +16,14 @@ const xImage = 'https://i.postimg.cc/RVfwg1wC/twitter-min.png';
 const instagramImage = 'https://i.postimg.cc/Jz5ZL1T9/instagram-min.png';
 const linkedInImage = 'https://i.postimg.cc/ZqfNWwzH/linkedin-min.png';
 
+const prajwolImage = 'https://i.postimg.cc/6qtrqf4V/projwol-min.jpg';
+const ronitImage = 'https://i.postimg.cc/V6xKstzm/ronit-min.jpg';
+const bibekImage = 'https://i.postimg.cc/CLng3409/bibek.png';
+
 export const socialLinks = [
   {
     title: 'Facebook',
-    url: '/',
+    url: 'https://www.facebook.com/profile.php?id=61559819145404',
     image: facebookImage
   },
   {
@@ -29,12 +33,30 @@ export const socialLinks = [
   },
   {
     title: 'Instagram',
-    url: '/',
+    url: 'https://www.instagram.com/astrogenesis.tech/',
     image: instagramImage
   },
   {
     title: 'X',
-    url: '/',
+    url: 'https://x.com/astrogenesis__',
     image: xImage
+  }
+];
+
+export const TeamMember = [
+  {
+    name: 'Ronit Adhikari',
+    imgSrc: ronitImage,
+    post: 'FullStack Developer'
+  },
+  {
+    name: 'Bibek Bhattrai',
+    imgSrc: bibekImage,
+    post: 'Devops Engineer'
+  },
+  {
+    name: 'Prajwol pandey',
+    imgSrc: prajwolImage,
+    post: 'UI/UX Designer'
   }
 ];
