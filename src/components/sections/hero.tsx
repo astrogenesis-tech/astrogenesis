@@ -58,6 +58,7 @@ export default function Hero() {
         initial={{ scale: 0.5, opacity: 0, x: 30, y: 10 }}
         whileInView={{ scale: 1, opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true }}
+        transition={{ bounce: 100 }}
         className="grid place-items-center"
       >
         <Orbit />
