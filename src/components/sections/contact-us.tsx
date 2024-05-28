@@ -99,7 +99,7 @@ export default function ContactUs() {
               <h3 className="mb-5 text-2xl font-medium">Social Links</h3>
               <div className="flex items-center space-x-7">
                 {socialLinks.map((link) => (
-                  <a key={link.title} href={link.url}>
+                  <a key={link.title} href={link.url} target="_blank" rel="noopener noreferrer">
                     <img src={link.image} alt="image" className="size-7" />
                   </a>
                 ))}

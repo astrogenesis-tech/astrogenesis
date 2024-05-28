@@ -35,7 +35,7 @@ const services: { title: string; image: string; description: string }[] = [
 
 export default function Services() {
   return (
-    <section className="cont my-20 md:my-32 lg:my-40" id="services">
+    <section className="cont my-2" id="services">
       <motion.h3 {...revealFromTop} className="section-title">
         <span>What</span> <span className="text-emerald-600">Services</span> <span>do we </span>{' '}
         <span className="text-emerald-600">Offer</span>

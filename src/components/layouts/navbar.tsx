@@ -29,12 +29,12 @@ export default function Navbar() {
           <button onClick={scrollIntoView('about-us')} className="hover:text-gray-300/80">
             About
           </button>
-          <button onClick={scrollIntoView('team')} className="hover:text-gray-300/80">
+          <Link href="/team" className="hover:text-gray-300/80">
             Team
-          </button>
-          <button onClick={scrollIntoView('services')} className="hover:text-gray-300/80">
+          </Link>
+          <Link href="/services" className="hover:text-gray-300/80">
             Services
-          </button>
+          </Link>
           <button onClick={scrollIntoView('testimonials')} className="hover:text-gray-300/80">
             Testimonials
           </button>

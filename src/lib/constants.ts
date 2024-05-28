@@ -28,7 +28,7 @@ export const socialLinks = [
   },
   {
     title: 'Linked In',
-    url: '/',
+    url: 'https://linkedIn.com/astroGenesisTechnologies',
     image: linkedInImage
   },
   {
