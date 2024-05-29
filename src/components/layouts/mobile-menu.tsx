@@ -42,7 +42,7 @@ export default function MobileMenu({ children }: Props) {
   return (
     <Drawer direction="left">
       <DrawerTrigger asChild>{children}</DrawerTrigger>
-      <DrawerContent className="dark flex h-screen w-10/12 max-w-screen-xs flex-col rounded-none border-none bg-gray-800/40 px-6 pb-6 text-gray-200 filter backdrop-blur-xl xs:px-10">
+      <DrawerContent className="dark flex h-[100dvh] max-h-[100dvh] min-h-screen w-10/12 max-w-screen-xs flex-col rounded-none border-none bg-gray-800/40 p-6 pt-0 text-gray-200 filter backdrop-blur-xl xs:px-10">
         <motion.div
           initial={{ x: -100, opacity: 0, scaleX: 0.9 }}
           whileInView={{ x: 0, opacity: 1, scaleX: 1 }}
