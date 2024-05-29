@@ -9,9 +9,12 @@ export function Orbit() {
 
   const handleResize = useCallback(() => {
     const width = window.innerWidth;
-    if (width < 400) {
+    if (width < 360) {
       setInnerRadius(60);
       setOuterRadius(140);
+    } else if (width < 400) {
+      setInnerRadius(60);
+      setOuterRadius(150);
     } else if (width < 640) {
       setInnerRadius(70);
       setOuterRadius(170);
@@ -20,7 +23,7 @@ export function Orbit() {
       setOuterRadius(200);
     } else if (width < 1024) {
       setInnerRadius(70);
-      setOuterRadius(160);
+      setOuterRadius(150);
     } else if (width < 1280) {
       setInnerRadius(70);
       setOuterRadius(180);
@@ -41,7 +44,7 @@ export function Orbit() {
 
   return (
     <section className="relative mx-auto flex h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-100">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black/40 to-gray-300/80 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-100">
         Astro Genesis
       </span>
 
@@ -59,11 +62,16 @@ export function Orbit() {
       </OrbitingCircles>
 
       {/* Outer Circles (reverse) */}
-      <OrbitingCircles className="size-12 border-none" reverse duration={20} radius={outerRadius}>
+      <OrbitingCircles
+        className="size-10 border-none sm:size-12 md:size-10 lg:size-12"
+        reverse
+        duration={20}
+        radius={outerRadius}
+      >
         <img src={nodejsImage} alt="logo" />
       </OrbitingCircles>
       <OrbitingCircles
-        className="size-12 border-none"
+        className="size-10 border-none sm:size-12 md:size-10 lg:size-12"
         reverse
         duration={20}
         delay={20}

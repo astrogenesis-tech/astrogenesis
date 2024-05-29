@@ -27,7 +27,7 @@ const sendMailSchema = z.object({
     .trim()
     .optional()
 });
-export type SendMailSchema = z.infer<typeof sendMailSchema>;
+type SendMailSchema = z.infer<typeof sendMailSchema>;
 
 export default function ContactUs() {
   const [isSending, setIsSending] = useState(false);
@@ -71,7 +71,7 @@ export default function ContactUs() {
 
   return (
     <div className="mt-16 bg-gray-800/40 py-20 md:mt-32 md:px-10 lg:mt-40">
-      <section className="cont rounded-lg text-gray-300" id="contact-us">
+      <section className="cont scroll-m-24 rounded-lg text-gray-300" id="contact-us">
         <motion.h3 {...revealFromTop} className="section-title mb-20">
           <span>Join the</span> <span className="text-emerald-600">finest hands</span>{' '}
           <span>on the </span> <span className="text-emerald-600">market</span>

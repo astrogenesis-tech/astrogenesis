@@ -14,3 +14,11 @@ export const scrollIntoView = (target: string) => {
     window.scroll({ top: scrollLength, behavior: 'smooth' });
   };
 };
+
+export const wait = async (time = 1000) => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res('okay');
+    }, time);
+  });
+};
