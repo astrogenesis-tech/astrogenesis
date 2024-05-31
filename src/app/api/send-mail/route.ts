@@ -30,14 +30,14 @@ export const POST = async (req: NextRequest) => {
 
     const data = sendMailSchema.parse(body);
     if (!data) return NextResponse.json({ message: 'Invalid request sent' }, { status: 400 });
-    sendMail({
+    await sendMail({
       mail: 'astrogenesis.tech@gmail.com',
       subject: 'A client has tried to contact you from the browser.',
       text: `<strong>Name: ${data.name}</strong> <br> <strong>Email: ${data.email}</strong> <br> ${data.phone ? `<strong>Phone: ${data.phone}</strong>` : ''}`
     });
     return NextResponse.json({ message: 'Mail sent successfully' });
   } catch (err) {
-    if (err instanceof Error) return NextResponse.json({ message: err.message });
+    if (err instanceof Error) return NextResponse.json({ message: err.message }, { status: 400 });
     if (err instanceof ZodError) {
       return NextResponse.json({ message: err.issues[0].message }, { status: 400 });
     }

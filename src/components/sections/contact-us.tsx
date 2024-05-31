@@ -51,12 +51,11 @@ export default function ContactUs() {
         document.body.focus();
         return;
       }
-      res
-        .json()
-        .then((data) => {
-          throw new Error(data.message);
-        })
-        .catch(() => null);
+      res.json().then((data) => {
+        toast.dismiss();
+        toast.error(data.message);
+        return;
+      });
     } catch (error) {
       let message = 'Unknown error occurred';
       if (error instanceof Error) {
