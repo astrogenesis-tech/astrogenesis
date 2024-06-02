@@ -11,7 +11,7 @@ export default function Navbar() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className={`sticky left-0 top-0 z-30 h-20 bg-gray-900/70 backdrop-blur-xl transition-all sm:h-24`}
+      className={`left-0 top-0 z-30 h-20 bg-gray-900/70 backdrop-blur-xl transition-all sm:h-24`}
     >
       <div className="cont flex items-center">
         <Link href="/" className="md:text-md flex items-center space-x-3">

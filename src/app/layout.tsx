@@ -8,10 +8,29 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AstroGenesis Technologies',
-  description: 'AstroGenesis Technologies, A complete IT solution for you',
   icons: ['/favicon.ico'],
-  openGraph: { images: ['https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp'] }
+  // openGraph: { images: ['https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp'] }
+  title: 'AstroGenesis Technologies',
+  description:
+    'Astrogenesis Technologies is a complete web service solution for digitally managed business, brands, consultancies, schools, colleges, hotels and restaurants.',
+
+  openGraph: {
+    title: 'Astrogenesis Technologies',
+    type: 'website',
+    url: 'https://www.astrogenesis.tech',
+    description:
+      'Astrogenesis Technologies is a complete web service solution for digitally managed business, brands, consultancies, schools, colleges, hotels and restaurants.',
+    images: ['https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp']
+  },
+
+  twitter: {
+    title: 'Astrogenesis Technologies',
+    site: 'https://www.astrogenesis.tech',
+    description:
+      'Astrogenesis Technologies is a complete web service solution for digitally managed business, brands, consultancies, schools, colleges, hotels and restaurants.',
+    card: 'summary_large_image',
+    images: ['https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp']
+  }
 };
 
 export default function RootLayout({
