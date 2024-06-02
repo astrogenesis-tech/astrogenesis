@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   icons: ['/favicon.ico'],
-  // openGraph: { images: ['https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp'] }
   title: 'AstroGenesis Technologies',
   description:
     'Astrogenesis Technologies is a complete web service solution for digitally managed business, brands, consultancies, schools, colleges, hotels and restaurants.',
