@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'AstroGenesis Technologies',
-  description: 'AstroGenesis Tech, A complete IT solution for you'
+  description: 'AstroGenesis Technologies, A complete IT solution for you',
+  icons: ['/favicon.ico'],
+  openGraph: { images: ['https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp'] }
 };
 
 export default function RootLayout({
