@@ -8,29 +8,34 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
+const title = 'AstroGenesis Technologies';
+const description =
+  'Astrogenesis Technologies is a complete web service solution for digitally managed business, brands, consultancies, schools, colleges, hotels and restaurants.';
+const ogImage = 'https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp';
+const siteUrl = 'https://www.astrogenesis.tech';
+
 export const metadata: Metadata = {
   icons: ['/favicon.ico'],
-  title: 'AstroGenesis Technologies',
-  description:
-    'Astrogenesis Technologies is a complete web service solution for digitally managed business, brands, consultancies, schools, colleges, hotels and restaurants.',
+  title,
+  category: 'product/service',
+  description,
   keywords: 'astrogenesistech, astrogenesistechnologies, astrogenesistechnology, astrogenesis',
 
   openGraph: {
-    title: 'Astrogenesis Technologies',
+    title,
+    siteName: title,
     type: 'website',
-    url: 'https://www.astrogenesis.tech',
-    description:
-      'Astrogenesis Technologies is a complete web service solution for digitally managed business, brands, consultancies, schools, colleges, hotels and restaurants.',
-    images: ['https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp']
+    url: siteUrl,
+    description,
+    images: [ogImage]
   },
 
   twitter: {
-    title: 'Astrogenesis Technologies',
-    site: 'https://www.astrogenesis.tech',
-    description:
-      'Astrogenesis Technologies is a complete web service solution for digitally managed business, brands, consultancies, schools, colleges, hotels and restaurants.',
+    title,
+    site: siteUrl,
+    description,
     card: 'summary_large_image',
-    images: ['https://i.postimg.cc/nVNHZr8k/astrogenesis-og.webp']
+    images: [ogImage]
   },
 
   authors: [

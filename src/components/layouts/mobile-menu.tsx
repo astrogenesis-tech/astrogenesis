@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import React, { useEffect, useRef } from 'react';
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '../ui/drawer';
+import Image from 'next/image';
 
 const navItems: { title: string; href: string }[] = [
   {
@@ -50,7 +51,15 @@ export default function MobileMenu({ children }: Props) {
           transition={{ delay: 0.1, duration: 0.25 }}
           className="mb-10 mt-4 flex items-center space-x-3"
         >
-          <img loading="lazy" decoding="async" src={logoImage} alt="logo" className="size-11" />
+          <Image
+            loading="lazy"
+            decoding="async"
+            src={logoImage}
+            alt="logo"
+            className="size-11"
+            width={128}
+            height={128}
+          />
           <span className={`${inter.className} text-xl font-semibold`}>AstroGenesis</span>
         </m.div>
 

@@ -2,6 +2,7 @@
 import { revealFromBottom, revealFromTop } from '@/lib/animations';
 import { teamMembers } from '@/lib/constants';
 import { m } from 'framer-motion';
+import Image from 'next/image';
 
 export default function page() {
   return (
@@ -22,11 +23,14 @@ export default function page() {
             key={member.name}
             className="cursor-pointer space-y-3 rounded-lg shadow-sm transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-2xl"
           >
-            <img
+            <Image
               loading="lazy"
               decoding="async"
               src={member.image}
               alt="team member image"
+              height={1920}
+              width={1080}
+              quality={100}
               className="size-60 rounded-full border-4 border-gray-100 bg-gray-100 object-cover"
             />
             <h1 className="text-center text-2xl font-medium text-gray-100">{member.name}</h1>

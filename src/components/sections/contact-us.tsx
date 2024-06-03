@@ -9,6 +9,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { InputWithIcon } from '../ui/input-with-icon';
+import Image from 'next/image';
 
 const sendMailSchema = z.object({
   name: z
@@ -99,12 +100,12 @@ export default function ContactUs() {
               <div className="flex items-center space-x-7">
                 {socialLinks.map((link) => (
                   <a key={link.title} href={link.url} target="_blank" rel="noopener noreferrer">
-                    <img
+                    <Image
                       src={link.image}
                       alt="image"
                       className="size-7"
-                      loading="lazy"
-                      decoding="async"
+                      height={128}
+                      width={128}
                     />
                   </a>
                 ))}

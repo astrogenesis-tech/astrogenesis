@@ -2,6 +2,7 @@
 import { nodejsImage, postgresqlImage, reactImage, wordpressImage } from '@/lib/constants';
 import { useCallback, useLayoutEffect, useState } from 'react';
 import OrbitingCircles from './orbiting-circle';
+import Image from 'next/image';
 
 export function Orbit() {
   const [innerRadius, setInnerRadius] = useState(40);
@@ -50,10 +51,22 @@ export function Orbit() {
 
       {/* Inner Circles */}
       <OrbitingCircles className="size-8 border-none" duration={20} delay={20} radius={innerRadius}>
-        <img src={postgresqlImage} alt="logo" loading="lazy" decoding="async" />
+        <Image
+          src={postgresqlImage}
+          alt="postgresql logo"
+          height={128}
+          width={128}
+          className="object-contain"
+        />
       </OrbitingCircles>
       <OrbitingCircles className="size-8 border-none" duration={20} delay={10} radius={innerRadius}>
-        <img src={wordpressImage} alt="logo" loading="lazy" decoding="async" />
+        <Image
+          src={wordpressImage}
+          alt="wordpress logo"
+          height={128}
+          width={128}
+          className="object-contain"
+        />
       </OrbitingCircles>
 
       {/* Outer Circles (reverse) */}
@@ -63,7 +76,13 @@ export function Orbit() {
         duration={20}
         radius={outerRadius}
       >
-        <img src={nodejsImage} alt="logo" loading="lazy" decoding="async" />
+        <Image
+          src={nodejsImage}
+          alt="nodejs logo"
+          height={128}
+          width={128}
+          className="object-contain"
+        />
       </OrbitingCircles>
       <OrbitingCircles
         className="size-10 border-none sm:size-12 md:size-10 lg:size-12"
@@ -72,7 +91,13 @@ export function Orbit() {
         delay={20}
         radius={outerRadius}
       >
-        <img src={reactImage} alt="logo" loading="lazy" decoding="async" />
+        <Image
+          src={reactImage}
+          alt="reactjs logo"
+          height={128}
+          width={128}
+          className="object-contain"
+        />
       </OrbitingCircles>
     </section>
   );

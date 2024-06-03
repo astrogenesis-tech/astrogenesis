@@ -3,6 +3,7 @@ import { revealFromLeft, revealFromRight } from '@/lib/animations';
 import { whyUsImage } from '@/lib/constants';
 import { poppins } from '@/lib/fonts';
 import { m } from 'framer-motion';
+import Image from 'next/image';
 import { ReactTyped } from 'react-typed';
 
 export default function WhyUs() {
@@ -18,6 +19,7 @@ export default function WhyUs() {
             typeSpeed={40}
             startDelay={500}
             startWhenVisible
+            showCursor={false}
           />
         </h2>
         <m.p {...revealFromLeft} className="mt-7 text-gray-300/80">
@@ -28,14 +30,15 @@ export default function WhyUs() {
         </m.p>
       </div>
 
-      <m.img
-        loading="lazy"
-        decoding="async"
-        className="max-h-80 w-full object-contain"
-        src={whyUsImage}
-        alt="img"
-        {...revealFromRight}
-      />
+      <m.div {...revealFromRight}>
+        <Image
+          className="max-h-80 w-full object-contain"
+          src={whyUsImage}
+          width={1920}
+          height={1080}
+          alt="img"
+        />
+      </m.div>
     </section>
   );
 }

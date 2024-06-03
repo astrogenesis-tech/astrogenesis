@@ -5,6 +5,7 @@ import { poppins } from '@/lib/fonts';
 import { scrollIntoView } from '@/lib/utils';
 import { m } from 'framer-motion';
 import { MoveRight } from 'lucide-react';
+import Image from 'next/image';
 
 const services: { title: string; image: string; description: string }[] = [
   {
@@ -54,12 +55,12 @@ export default function Services() {
             key={i}
             className="mx-3 mb-20 flex flex-col rounded-lg bg-gray-800/40 p-4 md:mb-5"
           >
-            <img
+            <Image
+              width={1920}
+              height={1080}
               src={service.image}
               className="max-h-60 rounded-md object-contain"
               alt="image"
-              loading="lazy"
-              decoding="async"
             />
             <h3 className="my-2 text-lg font-semibold">{service.title}</h3>
             <p className="mb-6 text-sm text-gray-400">{service.description}</p>

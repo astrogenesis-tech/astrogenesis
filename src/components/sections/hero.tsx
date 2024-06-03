@@ -28,6 +28,7 @@ export default function Hero() {
             className="text-xl font-semibold text-gray-300/95"
             strings={['Join us on this this fantastic journey.']}
             typeSpeed={40}
+            showCursor={false}
           />
         </p>
 

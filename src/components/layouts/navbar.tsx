@@ -5,6 +5,7 @@ import { m } from 'framer-motion';
 import { Menu, MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import MobileMenu from './mobile-menu';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -15,12 +16,12 @@ export default function Navbar() {
     >
       <div className="cont flex items-center">
         <Link href="/" className="md:text-md flex items-center space-x-3">
-          <img
-            loading="lazy"
-            decoding="async"
+          <Image
             src={logoImage}
             alt="logo"
             className="size-10 object-contain xs:size-11"
+            width={128}
+            height={128}
           />
           <span className={`${inter.className} text-lg font-semibold text-gray-200 xs:text-xl`}>
             AstroGenesis

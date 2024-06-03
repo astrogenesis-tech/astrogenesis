@@ -3,6 +3,7 @@ import { revealFromLeft, revealFromRight } from '@/lib/animations';
 import { whyUsImage } from '@/lib/constants';
 import { poppins } from '@/lib/fonts';
 import { m } from 'framer-motion';
+import Image from 'next/image';
 import { ReactTyped } from 'react-typed';
 
 export default function page() {
@@ -14,7 +15,13 @@ export default function page() {
         <div className="relative lg:p-10 xl:p-20">
           {backgroundShadow}
           <h3 className="min-h-10 text-4xl font-semibold">
-            <ReactTyped strings={['About us']} typeSpeed={40} startDelay={500} startWhenVisible />
+            <ReactTyped
+              strings={['About us']}
+              typeSpeed={40}
+              startDelay={500}
+              startWhenVisible
+              showCursor={false}
+            />
           </h3>
           <m.p {...revealFromLeft} className="mt-7 text-gray-300/80">
             Astrogenesis Technologies is Nepal based online web service agency.The company is a team
@@ -23,14 +30,16 @@ export default function page() {
           </m.p>
         </div>
 
-        <m.img
-          {...revealFromRight}
-          loading="lazy"
-          decoding="async"
-          className="max-h-80 w-full object-contain"
-          src={whyUsImage}
-          alt="img"
-        />
+        <m.div {...revealFromRight}>
+          <Image
+            height={1280}
+            width={720}
+            quality={100}
+            className="max-h-80 w-full object-contain"
+            src={whyUsImage}
+            alt="img"
+          />
+        </m.div>
       </div>
     </main>
   );
