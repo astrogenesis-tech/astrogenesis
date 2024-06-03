@@ -1,6 +1,6 @@
 'use client';
 import { revealFromBottom, revealFromTop } from '@/lib/animations';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Clock12, Gem, Headset, Webhook } from 'lucide-react';
 
 const list = [
@@ -16,22 +16,22 @@ const list = [
 export default function Best() {
   return (
     <section className="cont my-16 md:my-32 lg:my-40">
-      <motion.h3 {...revealFromTop} className="section-title">
+      <m.h3 {...revealFromTop} className="section-title">
         <span>We are the</span> <span className="text-emerald-600">Best</span> <span>in the</span>{' '}
         <span className="text-emerald-600">Market</span>{' '}
-      </motion.h3>
+      </m.h3>
 
-      <motion.div {...revealFromBottom} className={`mt-12 grid place-items-center lg:grid-cols-4`}>
+      <m.div {...revealFromBottom} className={`mt-12 grid place-items-center lg:grid-cols-4`}>
         {list.map((item, i) => (
           <div key={i} className="relative m-6 flex h-full w-full flex-col items-center space-y-7">
             {backgroundShadow}
-            <item.icon className="size-12 text-teal-600" />
+            <item.icon className="size-12 text-emerald-700" />
             <span className="text-center text-lg font-medium tracking-wide text-gray-300 lg:text-base xl:text-lg">
               {item.title}
             </span>
           </div>
         ))}
-      </motion.div>
+      </m.div>
     </section>
   );
 }

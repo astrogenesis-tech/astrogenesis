@@ -1,7 +1,7 @@
 'use client';
 import { revealFromBottom, revealFromTop } from '@/lib/animations';
 import { poppins } from '@/lib/fonts';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Star } from 'lucide-react';
 
 const testimonials: { username: string; stars: number; review: string }[] = [
@@ -27,13 +27,13 @@ const testimonials: { username: string; stars: number; review: string }[] = [
 export default function Testimonials() {
   return (
     <section className="cont my-16 rounded-lg bg-gray-800/40 px-4 py-10 md:my-32 md:py-14 lg:my-40">
-      <motion.h3 {...revealFromTop} className="section-title" id="testimonials">
+      <m.h3 {...revealFromTop} className="section-title" id="testimonials">
         <span>We are</span> <span className="text-emerald-600">Loved</span> &{' '}
         <span className="text-emerald-600">Trusted</span> <span>by our</span>{' '}
         <span className="text-emerald-600">Clients</span>
-      </motion.h3>
+      </m.h3>
 
-      <motion.section
+      <m.section
         {...revealFromBottom}
         className={`${poppins.className} mt-12 grid text-center lg:grid-cols-3`}
       >
@@ -41,14 +41,14 @@ export default function Testimonials() {
           <div key={i} className="m-7 flex flex-col items-center">
             <div className="flex space-x-2">
               {new Array(testimonial.stars).fill('nothing').map((_, i) => (
-                <Star key={i} className="size-8 fill-yellow-500 text-yellow-500 " />
+                <Star key={i} className="size-8 fill-yellow-500 text-yellow-500" />
               ))}
             </div>
             <p className="my-5 text-xl text-gray-200/90">{testimonial.review}</p>
             <p className="mt-auto text-lg font-medium text-gray-200">{testimonial.username}</p>
           </div>
         ))}
-      </motion.section>
+      </m.section>
     </section>
   );
 }

@@ -55,10 +55,10 @@ export function Orbit() {
         delay={20}
         radius={innerRadius}
       >
-        <img src={postgresqlImage} alt="logo" />
+        <img src={postgresqlImage} alt="logo" loading="lazy" decoding="async" />
       </OrbitingCircles>
       <OrbitingCircles className="size-8 border-none" duration={20} delay={10} radius={innerRadius}>
-        <img src={wordpressImage} alt="logo" />
+        <img src={wordpressImage} alt="logo" loading="lazy" decoding="async" />
       </OrbitingCircles>
 
       {/* Outer Circles (reverse) */}
@@ -68,7 +68,7 @@ export function Orbit() {
         duration={20}
         radius={outerRadius}
       >
-        <img src={nodejsImage} alt="logo" />
+        <img src={nodejsImage} alt="logo" loading="lazy" decoding="async" />
       </OrbitingCircles>
       <OrbitingCircles
         className="size-10 border-none sm:size-12 md:size-10 lg:size-12"
@@ -77,7 +77,7 @@ export function Orbit() {
         delay={20}
         radius={outerRadius}
       >
-        <img src={reactImage} alt="logo" />
+        <img src={reactImage} alt="logo" loading="lazy" decoding="async" />
       </OrbitingCircles>
     </section>
   );

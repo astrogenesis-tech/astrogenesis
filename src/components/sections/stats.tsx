@@ -1,17 +1,17 @@
 'use client';
 import { revealFromBottom } from '@/lib/animations';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Counter from '../utils/counter';
 
 export default function stats() {
   return (
     <section className="cont my-20">
-      <motion.h3 {...revealFromBottom} className="section-title">
+      <m.h3 {...revealFromBottom} className="section-title">
         <span>Each clients</span> <span className="text-emerald-600">success</span>{' '}
         <span>is a</span> <span className="text-emerald-600">Glory</span> <span>to us</span>
-      </motion.h3>
+      </m.h3>
 
-      <motion.div
+      <m.div
         {...revealFromBottom}
         className="mt-7 grid place-items-center rounded-lg py-4 text-center md:grid-cols-4"
       >
@@ -42,7 +42,7 @@ export default function stats() {
           </span>
           <span className="uppercase tracking-wider text-gray-400">Team Members</span>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 }

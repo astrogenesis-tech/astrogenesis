@@ -1,17 +1,17 @@
 'use client';
 import { logoImage } from '@/lib/constants';
 import { inter } from '@/lib/fonts';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Menu, MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import MobileMenu from './mobile-menu';
+
 export default function Navbar() {
   return (
-    <motion.header
+    <m.header
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      className={`sticky left-0 top-0 z-30 h-20 bg-gray-900/70 backdrop-blur-xl transition-all sm:h-24`}
+      animate={{ opacity: 1 }}
+      className={`sticky left-0 top-0 z-30 h-20 bg-gray-900/40 backdrop-blur-xl transition-all sm:h-24`}
     >
       <div className="cont flex items-center">
         <Link href="/" className="md:text-md flex items-center space-x-3">
@@ -29,8 +29,8 @@ export default function Navbar() {
 
         <span className="ml-auto" />
         <MobileMenu>
-          <button className="md:hidden">
-            <Menu className="" />
+          <button className="md:hidden" aria-label="open navigation menu">
+            <Menu className="size-6" />
           </button>
         </MobileMenu>
         <nav className="hidden items-center justify-start text-[15px] font-medium text-gray-200/95 md:flex md:space-x-10 lg:space-x-12">
@@ -52,6 +52,6 @@ export default function Navbar() {
           </Link>
         </nav>
       </div>
-    </motion.header>
+    </m.header>
   );
 }

@@ -2,7 +2,7 @@
 import { logoImage } from '@/lib/constants';
 import { inter } from '@/lib/fonts';
 import { wait } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -43,38 +43,38 @@ export default function MobileMenu({ children }: Props) {
     <Drawer direction="left">
       <DrawerTrigger asChild>{children}</DrawerTrigger>
       <DrawerContent className="dark flex h-[100dvh] max-h-[100dvh] min-h-screen w-10/12 max-w-screen-xs flex-col rounded-none border-none bg-gray-800/40 p-6 text-gray-200 filter backdrop-blur-xl xs:px-10">
-        <motion.div
-          initial={{ x: -100, opacity: 0, scaleX: 0.9 }}
+        <m.div
+          initial={{ x: -60, opacity: 0, scaleX: 0.9 }}
           whileInView={{ x: 0, opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.1, duration: 0.3 }}
+          transition={{ delay: 0.1, duration: 0.25 }}
           className="mb-10 mt-4 flex items-center space-x-3"
         >
           <img loading="lazy" decoding="async" src={logoImage} alt="logo" className="size-11" />
           <span className={`${inter.className} text-xl font-semibold`}>AstroGenesis</span>
-        </motion.div>
+        </m.div>
 
         <nav className="flex flex-col space-y-5 font-medium">
           {navItems.map((item, i) => (
-            <motion.div
+            <m.div
               key={item.title}
-              initial={{ x: -100, opacity: 0, scaleX: 0.9 }}
+              initial={{ x: -60, opacity: 0, scaleX: 0.9 }}
               whileInView={{ x: 0, opacity: 1, scaleX: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.15 + i * 0.05, duration: 0.3 }}
+              transition={{ delay: 0.15 + i * 0.05, duration: 0.25 }}
             >
               <Link href={item.href} onClick={() => closeButtonRef.current?.click()}>
                 {item.title}
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </nav>
-        <motion.div
+        <m.div
           className="mt-auto"
-          initial={{ x: -100, opacity: 0, scaleX: 0.9 }}
+          initial={{ x: -60, opacity: 0, scaleX: 0.9 }}
           whileInView={{ x: 0, opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.3 }}
+          transition={{ delay: 0.3, duration: 0.25 }}
         >
           <button
             onClick={() => {
@@ -86,7 +86,7 @@ export default function MobileMenu({ children }: Props) {
             <span>Let&apos;s get started</span>
             <MoveRight className="size-5 transition group-hover:translate-x-1" />
           </button>
-        </motion.div>
+        </m.div>
         <DrawerClose ref={closeButtonRef} className="hidden">
           Close
         </DrawerClose>

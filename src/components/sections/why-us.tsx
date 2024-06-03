@@ -2,7 +2,7 @@
 import { revealFromLeft, revealFromRight } from '@/lib/animations';
 import { whyUsImage } from '@/lib/constants';
 import { poppins } from '@/lib/fonts';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ReactTyped } from 'react-typed';
 
 export default function WhyUs() {
@@ -12,23 +12,23 @@ export default function WhyUs() {
     >
       <div className="relative lg:p-10 xl:p-20">
         {backgroundShadow}
-        <h3 className="min-h-10 text-4xl font-semibold">
+        <h2 className="min-h-10 text-4xl font-semibold">
           <ReactTyped
             strings={['Why AstroGenesis?']}
             typeSpeed={40}
             startDelay={500}
             startWhenVisible
           />
-        </h3>
-        <motion.p {...revealFromLeft} className="mt-7 text-gray-300/80">
+        </h2>
+        <m.p {...revealFromLeft} className="mt-7 text-gray-300/80">
           We excel in software innovation, offering tailored s1 olutions with industry-leading
           expertise. Our commitment to quality ensures robust and scalable software delivered on
           time. With ongoing support and competitive pricing, we re dedicated to your success,
           making us your trusted partner in the digital landscape.
-        </motion.p>
+        </m.p>
       </div>
 
-      <motion.img
+      <m.img
         loading="lazy"
         decoding="async"
         className="max-h-80 w-full object-contain"

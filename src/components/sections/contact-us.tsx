@@ -2,7 +2,7 @@
 import { revealFromBottom, revealFromTop } from '@/lib/animations';
 import { socialLinks } from '@/lib/constants';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Loader2, Mail, MapPin, Phone, User } from 'lucide-react';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -70,21 +70,21 @@ export default function ContactUs() {
 
   return (
     <div className="mt-16 bg-gray-800/40 py-20 md:mt-32 md:px-10 lg:mt-40">
-      <section className="cont scroll-m-24 rounded-lg text-gray-300" id="contact-us">
-        <motion.h3 {...revealFromTop} className="section-title mb-20">
+      <section className="cont scroll-m-24 rounded-xl text-gray-300" id="contact-us">
+        <m.h3 {...revealFromTop} className="section-title mb-20">
           <span>Join the</span> <span className="text-emerald-600">finest hands</span>{' '}
           <span>on the </span> <span className="text-emerald-600">market</span>
-        </motion.h3>
+        </m.h3>
 
-        <motion.div {...revealFromBottom} className="grid space-y-24 md:grid-cols-2 md:space-y-0">
-          <section className="flex flex-col">
+        <m.div {...revealFromBottom} className="flex flex-col-reverse md:grid md:grid-cols-2">
+          <section className="mt-24 flex flex-col md:mt-0">
             <div className="space-y-5">
-              <h3 className="text-2xl font-medium">Contact us</h3>
+              <h3 className="text-3xl font-medium">Contact us</h3>
               <a href="mailto:astogenesis.tech@gmail.com" className="flex items-center space-x-3">
                 <Mail className="size-5" />
                 <span>astrogenesis.tech@gmail.com</span>
               </a>
-              <a href="telto:+9779845673174" className="flex items-center space-x-3">
+              <a href="tel:+9779845673174" className="flex items-center space-x-3">
                 <Phone className="size-5" />
                 <span>+977 9845673174</span>
               </a>
@@ -99,7 +99,13 @@ export default function ContactUs() {
               <div className="flex items-center space-x-7">
                 {socialLinks.map((link) => (
                   <a key={link.title} href={link.url} target="_blank" rel="noopener noreferrer">
-                    <img src={link.image} alt="image" className="size-7" />
+                    <img
+                      src={link.image}
+                      alt="image"
+                      className="size-7"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </a>
                 ))}
               </div>
@@ -107,7 +113,7 @@ export default function ContactUs() {
           </section>
 
           <section>
-            <h3 className="mb-5 text-2xl font-medium">Let us contact you</h3>
+            <h3 className="mb-5 text-3xl font-medium">Let us contact you</h3>
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-7 md:max-w-96">
               <InputWithIcon
                 type="text"
@@ -143,13 +149,13 @@ export default function ContactUs() {
                 <span className={`${isSending ? 'opacity-0' : ''}`}>Submit</span>
                 {isSending && (
                   <span className="absolute inset-0 grid place-items-center">
-                    <Loader2 className="size-6 animate-rotate" />
+                    <Loader2 className="size-6 animate-spin" />
                   </span>
                 )}
               </button>
             </form>
           </section>
-        </motion.div>
+        </m.div>
       </section>
     </div>
   );

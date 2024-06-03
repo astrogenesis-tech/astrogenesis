@@ -96,9 +96,6 @@ const config = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' }
-        },
-        rotate: {
-          to: { transform: 'rotate(360deg)' }
         }
       },
       animation: {
@@ -106,8 +103,7 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
         orbit: 'orbit calc(var(--duration)*1s) linear infinite',
         'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
-        slide: 'slide var(--speed) ease-in-out infinite alternate',
-        rotate: 'rotate 1s linear infinite'
+        slide: 'slide var(--speed) ease-in-out infinite alternate'
       }
     }
   },

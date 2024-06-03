@@ -3,7 +3,7 @@ import { revealFromBottom, revealFromTop } from '@/lib/animations';
 import { whyUsImage } from '@/lib/constants';
 import { poppins } from '@/lib/fonts';
 import { scrollIntoView } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { MoveRight } from 'lucide-react';
 
 const services: { title: string; image: string; description: string }[] = [
@@ -36,17 +36,17 @@ const services: { title: string; image: string; description: string }[] = [
 export default function Services() {
   return (
     <section className="mb-40 mt-10">
-      <motion.h3 {...revealFromTop} className="section-title">
+      <m.h3 {...revealFromTop} className="section-title">
         <span>What</span> <span className="text-emerald-600">Services</span> <span>do we </span>{' '}
         <span className="text-emerald-600">Offer</span>
-      </motion.h3>
+      </m.h3>
 
-      <motion.div
+      <m.div
         {...revealFromBottom}
         className={`${poppins.className} cont mt-12 grid md:grid-cols-2`}
       >
         {services.map((service, i) => (
-          <motion.div
+          <m.div
             initial={{ y: 30, opacity: 0, x: -10 }}
             whileInView={{ y: 0, opacity: 1, x: 0 }}
             transition={{ delay: 0.4 + 0.1 * i }}
@@ -54,7 +54,13 @@ export default function Services() {
             key={i}
             className="mx-3 mb-20 flex flex-col rounded-lg bg-gray-800/40 p-4 md:mb-5"
           >
-            <img src={service.image} className="max-h-60 rounded-md object-contain" alt="image" />
+            <img
+              src={service.image}
+              className="max-h-60 rounded-md object-contain"
+              alt="image"
+              loading="lazy"
+              decoding="async"
+            />
             <h3 className="my-2 text-lg font-semibold">{service.title}</h3>
             <p className="mb-6 text-sm text-gray-400">{service.description}</p>
             <button
@@ -64,9 +70,9 @@ export default function Services() {
               <span className="transition group-hover:-translate-x-1">Book now</span>
               <MoveRight className="size-6 transition group-hover:translate-x-2" />
             </button>
-          </motion.div>
+          </m.div>
         ))}
-      </motion.div>
+      </m.div>
     </section>
   );
 }

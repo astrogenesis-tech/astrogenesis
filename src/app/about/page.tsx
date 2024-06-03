@@ -2,28 +2,28 @@
 import { revealFromLeft, revealFromRight } from '@/lib/animations';
 import { whyUsImage } from '@/lib/constants';
 import { poppins } from '@/lib/fonts';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ReactTyped } from 'react-typed';
 
 export default function page() {
   return (
     <main className="min-h-screen">
       <div
-        className={`${poppins.className} cont mt-10 grid items-center space-y-12 rounded-lg bg-gray-800/40  lg:grid-cols-2 lg:space-y-0`}
+        className={`${poppins.className} cont mt-5 grid items-center space-y-12 bg-gray-800/40 py-7 lg:grid-cols-2 lg:space-y-0 xl:rounded-lg`}
       >
         <div className="relative lg:p-10 xl:p-20">
           {backgroundShadow}
           <h3 className="min-h-10 text-4xl font-semibold">
             <ReactTyped strings={['About us']} typeSpeed={40} startDelay={500} startWhenVisible />
           </h3>
-          <motion.p {...revealFromLeft} className="mt-7 text-gray-300/80">
+          <m.p {...revealFromLeft} className="mt-7 text-gray-300/80">
             Astrogenesis Technologies is Nepal based online web service agency.The company is a team
             of the highly skilled and talented young developers. The company aims to provide the
             faster, reliable and top notch services all over the world.
-          </motion.p>
+          </m.p>
         </div>
 
-        <motion.img
+        <m.img
           {...revealFromRight}
           loading="lazy"
           decoding="async"
