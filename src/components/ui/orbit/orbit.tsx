@@ -49,12 +49,7 @@ export function Orbit() {
       </span>
 
       {/* Inner Circles */}
-      <OrbitingCircles
-        className="size-8 border bg-slate-200"
-        duration={20}
-        delay={20}
-        radius={innerRadius}
-      >
+      <OrbitingCircles className="size-8 border-none" duration={20} delay={20} radius={innerRadius}>
         <img src={postgresqlImage} alt="logo" loading="lazy" decoding="async" />
       </OrbitingCircles>
       <OrbitingCircles className="size-8 border-none" duration={20} delay={10} radius={innerRadius}>
