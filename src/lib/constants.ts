@@ -1,4 +1,4 @@
-export const logoImage = 'https://i.postimg.cc/5Ns2zmxk/logo.png';
+export const logoImage = 'https://i.postimg.cc/C1xmwWbL/logo.webp';
 
 export const brandingImage = 'https://i.postimg.cc/G2swTgmc/brand-min.png';
 export const ecommergeImage = 'https://i.postimg.cc/tJSTRmS9/ecommerce-min.png';

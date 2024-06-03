@@ -10,7 +10,7 @@ export default function footer() {
         <img
           src={logoImage}
           alt="logo"
-          className="size-10 sm:size-14"
+          className="size-10 object-contain sm:size-14"
           loading="lazy"
           decoding="async"
         />

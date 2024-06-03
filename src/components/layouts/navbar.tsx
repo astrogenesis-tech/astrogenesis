@@ -20,7 +20,7 @@ export default function Navbar() {
             decoding="async"
             src={logoImage}
             alt="logo"
-            className="size-10 xs:size-11"
+            className="size-10 object-contain xs:size-11"
           />
           <span className={`${inter.className} text-lg font-semibold text-gray-200 xs:text-xl`}>
             AstroGenesis
