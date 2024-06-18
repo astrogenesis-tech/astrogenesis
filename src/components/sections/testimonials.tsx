@@ -6,19 +6,19 @@ import { Star } from 'lucide-react';
 
 const testimonials: { username: string; stars: number; review: string }[] = [
   {
-    username: 'Ronit Adhikari',
+    username: 'Sangam Adhikari',
     stars: 5,
     review:
       'Strongly recommend Astrogenesis Technologies to those seeking for great quality website from supportive agency.'
   },
   {
-    username: 'Bibek Bhattarai',
+    username: 'Om Poudel',
     stars: 5,
     review:
       'Looking for a digital dashboard or an online e-commerce management system. Join them, as they have got the finest hands on the market.'
   },
   {
-    username: 'Prajol Pandey',
+    username: 'Rahul Basnet',
     stars: 5,
     review:
       'Best decision to choose Astrogenesis Technologies. Our website was fast, reliable and our all of our users loved that.'
