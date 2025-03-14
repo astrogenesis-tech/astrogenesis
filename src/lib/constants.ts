@@ -42,7 +42,7 @@ export const socialLinks = [
 export const teamMembers = [
   {
     name: 'Ronit Adhikari',
-    image: 'https://i.postimg.cc/V6xKstzm/ronit-min.jpg',
+    image: 'https://i.postimg.cc/3RQRy9bD/MG-3429-1.jpg',
     role: 'Fullstack Developer'
   },
   {
