@@ -42,7 +42,7 @@ export const socialLinks = [
 export const teamMembers = [
   {
     name: 'Ronit Adhikari',
-    image: 'https://i.postimg.cc/V6xKstzm/ronit-min.jpg',
+    image: 'https://i.postimg.cc/3RQRy9bD/MG-3429-1.jpg',
     role: 'Fullstack Developer'
   },
   {
@@ -50,9 +50,5 @@ export const teamMembers = [
     image: 'https://i.postimg.cc/N0S2fDvz/bibek.webp',
     role: 'Devops Engineer'
   },
-  {
-    name: 'Prajwol Pandey',
-    image: 'https://i.postimg.cc/52bTpnSc/prajwol.webp',
-    role: 'UI/UX Designer'
-  }
+ 
 ];
